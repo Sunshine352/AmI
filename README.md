@@ -1,6 +1,6 @@
-# Attacks Meet Interpretability
+# Attacking "Attacks Meet Interpretability"
 
-This repository is for NeurIPS 2018 spotlight paper [Attacks Meet Interpretability: Attribute-steered Detection of Adversarial Samples](https://arxiv.org/abs/1810.11580).
+This repository contains an attack on the the NeurIPS 2018 spotlight paper [Attacks Meet Interpretability: Attribute-steered Detection of Adversarial Samples](https://arxiv.org/abs/1810.11580).
 
 ## Prerequisite
 
@@ -15,39 +15,19 @@ This repository is for NeurIPS 2018 spotlight paper [Attacks Meet Interpretabili
 
 ## Usage
 
-### Attribute Mutation
+Running `bash run_attack.sh` will take some time but should successfully generate adversarial examples.
 
-In `attribute_mutation.ipynb`, attribute-substituted and attribute-preserved images are produced for the base image. Four attributes are encoded with indices from 0 to 3. See the following table for details. Please use `attributes[index]` for corresponding attributes.
+To confirm they are indeed adversarial, run adversary_detection.ipynb. You should see at the model accuracy is 0% with a 0% detection rate.
 
-| Attribute | Index |
-|:---------:|:-----:|
-| left eye  |   0   |
-| right eye |   1   |
-| nose      |   2   |
-| mouth     |   3   |
-
-Two actions are also encoded with indices, which is listed in the following table. Please use `actions[index]` for corresponding actions.
-
-|    Action    | Index |
-|:------------:|:-----:|
-| substitution |   0   |
-| preservation |   1   |
-
-Generated images are saved in folder `data/attribute_mutated/[attribute]_[action]/`.
-
-### Attribute Witness Extraction
-
-Attribute witnesses are extracted layer by layer based on attribute-substituted and attribute-preserved images. Please find the implementation in `witness_extraction.ipynb`. Extracted witnesses are saved in folder `data/witnesses/`.
-
-### Attribute-steered Model
-
-With extracted attribute witnesses, neuron weakening and strengthening are applied for each input during execution. Adversary detection is achieved by observing the final prediction from attribute-steered model comparing to the original model. Detailed implementation is in `adversary_detection.ipynb`.
-
-7 adversarial attacks are included in folder `data/attacks`. Please change `attack_path` in the code to test on different attacks.
 
 ## Citation
 
-Please cite for any purpose of usage.
+The citation for the attack paper is here
+
+    @inproceedings{todo,
+    }
+
+The original citation for the AmI paper is here
 
     @inproceedings{tao2018attacks,
         title={Attacks Meet Interpretability: Attribute-steered Detection of Adversarial Samples},
@@ -55,3 +35,4 @@ Please cite for any purpose of usage.
         booktitle={Proceedings of Thirty-second Conference on Neural Information Processing Systems},
         year={2018}
     }
+
