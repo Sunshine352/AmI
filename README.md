@@ -1,6 +1,6 @@
 # Attacking "Attacks Meet Interpretability"
 
-This repository contains an attack on the the NeurIPS 2018 spotlight paper [Attacks Meet Interpretability: Attribute-steered Detection of Adversarial Samples](https://arxiv.org/abs/1810.11580).
+This repository contains an attack on the the NeurIPS 2018 spotlight paper [Attacks Meet Interpretability](https://arxiv.org/abs/1902.02322).
 
 ## Prerequisite
 
@@ -24,7 +24,11 @@ To confirm they are indeed adversarial, run adversary_detection.ipynb. You shoul
 
 The citation for the attack paper is here
 
-    @inproceedings{todo,
+    @article{carlini2019ami,
+        title={Is AmI (Attacks Meet Interpretability) Robust to Adversarial Examples?},
+        author={Nicholas Carlini},
+        year={2019},
+        journal={arXiv preprint arXiv:1902.02322}
     }
 
 The original citation for the AmI paper is here
